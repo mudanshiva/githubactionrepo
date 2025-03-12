@@ -4,7 +4,7 @@ on : [push]
 
 jobs:
   run-script:
-    runs-on : ubuntu-22.04
+    runs-on : ubuntu-latest
     steps:
       - name : checkout code
         uses : actions/checkout@v4
@@ -12,7 +12,7 @@ jobs:
       - name : set up python
         uses : actions/setup-python@v4
         with:
-          python-version : '3:13.0'
+          python-version : '3.14.0'
 
       - name : Run python script
         run : python hello.py
